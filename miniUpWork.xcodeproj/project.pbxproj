@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		473486A627A430E40069C65F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 473486A527A430E40069C65F /* .gitignore */; };
 		47F2616027A1916A00DF5C7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F2615F27A1916A00DF5C7C /* AppDelegate.swift */; };
 		47F2616227A1916A00DF5C7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F2616127A1916A00DF5C7C /* SceneDelegate.swift */; };
 		47F2616427A1916A00DF5C7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F2616327A1916A00DF5C7C /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		473486A527A430E40069C65F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		47F2615C27A1916A00DF5C7C /* miniUpWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miniUpWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47F2615F27A1916A00DF5C7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47F2616127A1916A00DF5C7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		47F2615327A1916A00DF5C7C = {
 			isa = PBXGroup;
 			children = (
+				473486A527A430E40069C65F /* .gitignore */,
 				47F2615E27A1916A00DF5C7C /* miniUpWork */,
 				47F2617527A1916C00DF5C7C /* miniUpWorkTests */,
 				47F2617F27A1916C00DF5C7C /* miniUpWorkUITests */,
@@ -234,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				473486A627A430E40069C65F /* .gitignore in Resources */,
 				47F2616C27A1916C00DF5C7C /* LaunchScreen.storyboard in Resources */,
 				47F2616927A1916C00DF5C7C /* Assets.xcassets in Resources */,
 				47F2616727A1916A00DF5C7C /* Main.storyboard in Resources */,
