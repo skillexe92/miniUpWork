@@ -203,7 +203,6 @@
                     <navigationItem key="navigationItem" id="elT-aV-5ql"/>
                     <connections>
                         <outlet property="emailTF" destination="9VA-8G-8b9" id="Vic-C2-N04"/>
-                        <outlet property="labelValidationMessage" destination="xuM-PV-pq0" id="qNo-y1-83r"/>
                         <outlet property="nameTF" destination="u0O-xl-SSi" id="6IH-w5-3ke"/>
                         <outlet property="phoneNumberTF" destination="a3n-v0-gaO" id="UX9-Jb-ZeR"/>
                         <outlet property="priceTF" destination="MdV-ab-PrG" id="3mq-kO-sVJ"/>

@@ -15,6 +15,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         emailTF.delegate = self
         phoneNumberTF.delegate = self
         priceTF.delegate = self
+        //sendButton.isEnabled = false
     }
     
     func isValidEmail(testStr:String) -> Bool {
@@ -38,16 +39,8 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     let result = priceTest.evaluate(with: testStr)
         return result
     }
-    func TFdidFill(testTF:UITextField) -> Bool {
-        if nameTF.hasText && emailTF.hasText && phoneNumberTF.hasText{
-            sendButton.isUserInteractionEnabled = true
-        } else { return false }
-        return true
-    }
     
     @IBOutlet weak var sendButton: UIButton!
-    
-    @IBOutlet weak var labelValidationMessage: UILabel!
     
     @IBOutlet weak var nameTF: UITextField!
     
@@ -62,14 +55,6 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func sendButtonPressed(_ sender: UIButton) {
-        if nameTF.text!.isEmpty || emailTF.text!.isEmpty || phoneNumberTF.text!.isEmpty || priceTF.text!.isEmpty {
-            labelValidationMessage.text = "Заполните все поля."
-            return
-        }
-        if nameTF.hasText && emailTF.hasText && phoneNumberTF.hasText && priceTF.hasText{
-            self.performSegue(withIdentifier: "unwindSegue", sender: nil)
-            return
-        }
         guard nameTF.text?.isEmpty == false else { return }
         if let _ = Double(nameTF.text!){
             let alert = UIAlertController(title: "Предупреждение", message: "Имя введено некорректно.", preferredStyle: .alert)
@@ -97,12 +82,15 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
             present(alert, animated: true, completion: nil)
 
         }
-        if priceTF.text?.isEmpty == true{
+        guard priceTF.text?.isEmpty == false else { return }
+        if isValidPrice(testStr: priceTF.text!) == false{
             let alert = UIAlertController(title: "Предупреждение", message: "Цена не была введена.", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             
             alert.addAction(okAction)
             present(alert, animated: true, completion: nil)
         }
-    }
+        if isValidPhoneNumber(testStr: phoneNumberTF.text!) && isValidPrice(testStr: priceTF.text!) && isValidEmail(testStr: emailTF.text!) == true{
+            return performSegue(withIdentifier: "unwindSegue", sender: nil) }
+        }
 }
